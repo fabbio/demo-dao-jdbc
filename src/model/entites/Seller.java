@@ -76,7 +76,9 @@ public class Seller implements Serializable {
 		return department;
 	}
 
-	
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
