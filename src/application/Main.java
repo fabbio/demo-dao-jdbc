@@ -24,6 +24,13 @@ public class Main {
 		for(Seller sl : list) {
 			System.out.println(sl);
 		}
+		
+		System.out.println("\n============= TEST 03 ==== SELLER FINDALL ===================");
+		
+	      list = sellerdao.findAll();
+		for(Seller sl : list) {
+			System.out.println(sl);
+		}
 	}
 
 }
