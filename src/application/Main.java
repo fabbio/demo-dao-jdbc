@@ -1,6 +1,6 @@
 package application;
 
-import java.util.Date;
+import java.util.List;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -13,9 +13,17 @@ public class Main {
 		
 		SellerDao sellerdao = DaoFactory.createSellerDAO();
 		
+		System.out.println("\n============= TEST 01 ==== FINDBYID ===================");
 		Seller seller = sellerdao.findById(7);
-		
 		System.out.println(seller);
+		
+		System.out.println("\n============= TEST 02 ==== SELLER FINDBYDEPARTMENT ===================");
+		Department dep = new Department(2, null);
+		List<Seller> list = sellerdao.findByDepartment(dep);
+		
+		for(Seller sl : list) {
+			System.out.println(sl);
+		}
 	}
 
 }
