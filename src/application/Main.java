@@ -38,6 +38,12 @@ public class Main {
 	     Seller sell= new Seller(null, "Fabbio Silva","Fabio@gmail.com", new Date(), 15000.0, dep);
 	     sellerdao.insert(sell);
 	     System.out.println("Inserted !! New Id : " + sell.getId());
+	     
+	     System.out.println("\n============= TEST 05 ==== UPDATE ===================");
+	     seller = sellerdao.findById(1);
+	     seller.setName("Carlos Brown");
+	     sellerdao.update(seller);
+	     
 	}
 
 }
